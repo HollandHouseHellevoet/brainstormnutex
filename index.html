@@ -3,15 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="NUTX — A Working Thesis">
-<meta property="og:description" content="Nutex Health is trading at replacement cost for its physical plant with $185M in cash and almost no debt. A brainstorm on platform transition and premium economics.">
-<meta property="og:image" content="https://brainstormmmnutx.medmerge.co/og-nutx.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://brainstormmmnutx.medmerge.co">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://brainstormmmnutx.medmerge.co/og-nutx.png">
 <title>NUTX — Working Thesis | Confidential</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -390,143 +381,6 @@
   .layer-body-inner p { margin-bottom: 14px; }
   .layer-body-inner p:last-child { margin-bottom: 0; }
 
-  /* ─── SCENARIO CALCULATOR ─── */
-  .calculator {
-    background: var(--navy-light);
-    border: 1px solid var(--border-strong);
-    padding: 36px;
-    margin: 28px 0;
-  }
-
-  .calc-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--cream);
-    margin-bottom: 8px;
-  }
-  .calc-subtitle {
-    font-size: 12px;
-    color: var(--cream-dim);
-    margin-bottom: 32px;
-  }
-
-  .calc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-bottom: 32px;
-  }
-
-  .calc-field label {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--cream-dim);
-    margin-bottom: 10px;
-  }
-
-  .slider-wrap { display: flex; align-items: center; gap: 12px; }
-
-  input[type=range] {
-    -webkit-appearance: none;
-    flex: 1;
-    height: 2px;
-    background: var(--border-strong);
-    outline: none;
-    border-radius: 1px;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--orange);
-    cursor: pointer;
-    transition: transform 0.15s;
-  }
-  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
-  input[type=range]::-moz-range-thumb {
-    width: 14px; height: 14px;
-    border-radius: 50%;
-    background: var(--orange);
-    cursor: pointer;
-    border: none;
-  }
-
-  .slider-val {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    color: var(--cream);
-    min-width: 52px;
-    text-align: right;
-  }
-
-  .calc-output {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-  }
-
-  .output-cell {
-    background: var(--navy);
-    padding: 20px 20px;
-    text-align: center;
-  }
-
-  .output-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 300;
-    color: var(--orange);
-    line-height: 1;
-    margin-bottom: 6px;
-    transition: all 0.3s ease;
-  }
-  .output-num.flash { color: var(--cream); }
-
-  .output-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--cream-dim);
-  }
-
-  /* ─── PROJECTION CHART ─── */
-  .chart-container {
-    position: relative;
-    background: var(--navy-light);
-    border: 1px solid var(--border);
-    padding: 28px;
-    margin: 28px 0;
-  }
-  .chart-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--cream-dim);
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  /* ─── SCENARIO TABLE ─── */
-  .scenario-badge {
-    display: inline-block;
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 2px;
-    letter-spacing: 0.05em;
-  }
-  .badge-current { background: rgba(247,244,239,0.08); color: var(--cream-dim); }
-  .badge-floor { background: rgba(247,244,239,0.12); color: var(--cream); }
-  .badge-internal { background: rgba(212,98,42,0.15); color: var(--orange); }
-  .badge-collective { background: rgba(212,98,42,0.25); color: var(--orange); }
-  .badge-full { background: var(--orange); color: var(--navy); font-weight: 700; }
-  .badge-failure { background: rgba(180,60,60,0.2); color: #e07070; }
-
   /* ─── PATH CARDS ─── */
   .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
   .path-card {
@@ -567,28 +421,20 @@
   .status-active { color: var(--orange); border-color: var(--orange); }
   .status-prospective { color: var(--cream-dim); border-color: var(--border-strong); }
 
-  /* ─── QUESTIONS ─── */
-  .question-list { counter-reset: q; list-style: none; margin: 0; }
-  .question-item {
-    counter-increment: q;
-    display: flex;
-    gap: 20px;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border);
+  /* ─── SCENARIO TABLE ─── */
+  .scenario-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
   }
-  .question-item:last-child { border-bottom: none; margin-bottom: 0; }
-  .q-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
-    color: var(--orange);
-    padding-top: 3px;
-    min-width: 24px;
-  }
-  .q-num::before { content: "0" counter(q); }
-  .q-text { font-size: 15px; color: var(--cream); }
-  .q-text strong { display: block; font-weight: 600; margin-bottom: 6px; font-size: 16px; }
-  .q-text span { color: var(--cream-dim); font-size: 14px; }
+  .badge-current { background: rgba(247,244,239,0.08); color: var(--cream-dim); }
+  .badge-floor { background: rgba(247,244,239,0.12); color: var(--cream); }
+  .badge-internal { background: rgba(212,98,42,0.15); color: var(--orange); }
+  .badge-collective { background: rgba(212,98,42,0.25); color: var(--orange); }
+  .badge-full { background: var(--orange); color: var(--navy); font-weight: 700; }
+  .badge-failure { background: rgba(180,60,60,0.2); color: #e07070; }
 
   /* ─── PRINT ─── */
   .print-btn {
@@ -618,7 +464,7 @@
     .layer-body { max-height: none !important; }
     body { background: white; color: #1a2a3a; }
     .memo-title, h2, h3, .metric-num, .layer-title { color: #1a2a3a; }
-    .calc-output, .metrics-grid { break-inside: avoid; }
+    .metrics-grid { break-inside: avoid; }
   }
 
   /* ─── DIVIDER ─── */
@@ -726,7 +572,6 @@
       <li><a href="#how-it-works" class="toc-link">How the Model Works</a></li>
       <li><a href="#scenarios" class="toc-link">Scenario Table</a></li>
       <li><a href="#paths" class="toc-link">Potential Paths</a></li>
-      <li><a href="#questions" class="toc-link">Questions</a></li>
     </ul>
   </aside>
 
@@ -749,12 +594,11 @@
     <section class="section" id="what-this-is">
       <div class="section-label">The Memo</div>
       <h2>What This Is</h2>
-      <p>This is a working memo. I am pressure-testing a thesis and I want your honest reaction: where it breaks, what I'm missing, and what you'd need to see before you'd commit capital or advise someone to.</p>
+      <p>This is a working memo.</p>
       <div class="callout">
-        <p><strong>The thesis has three layers:</strong></p>
+        <p><strong>The thesis has two layers:</strong></p>
         <p>1. Nutex Health is mispriced as a healthcare operator.</p>
         <p>2. The platform has structural prerequisites that could support a different kind of business.</p>
-        <p>3. I may be the person to execute the transition.</p>
       </div>
       <p>At its core, this is a bet on whether <strong>premium, not procedures</strong>, becomes the primary economic driver of the platform.</p>
     </section>
@@ -803,7 +647,7 @@
 
       <h3>01: IDR Concentration</h3>
       <p>Between 50 and 60 percent of claims go through Independent Dispute Resolution under the No Surprises Act. Win rate above 85 percent. Collection rate above 85 percent on wins. Arbitration costs were $138.3M in 2025, approximately 26 percent of arbitration-related revenue.</p>
-      <p>The Q4 2025 earnings included a one-time $55M revenue reduction from 18,950 claims deemed ineligible. The market priced that as permanent impairment. It was a cumulative cleanup covering 18 months. The market's core concern is regulatory fragility around IDR concentration and the broader scrutiny of billing practices across the micro hospital sector, not the operating results themselves.</p>
+      <p>The Q4 2025 earnings included a one-time $55M revenue reduction from 18,950 claims deemed ineligible. The market priced that as permanent impairment. It was a cumulative cleanup covering 18 months. The market's core concern is regulatory fragility and reputational exposure to HaloMD-related practices, not the operating results themselves.</p>
 
       <h3>02: Legacy Governance Overhang</h3>
       <p>The company restated financials. Two reverse stock splits totaling 150-to-1 were executed in 2024 to avoid NASDAQ delisting. A class action is pending. The 2025 10-K discloses that previously reported material weaknesses in internal controls were remediated as of December 31, 2025. Grant Thornton issued an unqualified opinion on both the financial statements and internal controls. The formal controls are clean. The market has not credited this. Institutional ownership remains at 5.3 percent.</p>
@@ -864,7 +708,7 @@
 
       <div class="callout">
         <p><strong>Status of MedMerge relative to Nutex, precisely stated:</strong></p>
-        <p>MedMerge is a separate company. I own it. The health insurance captive is live: Delaware LLC / Montana cell captive structure, operational. Commercial lines captive (P&C, workers' comp, D&O, E&O, GL) is planned. Medical malpractice captive is planned. MedMerge is not contractually tied to Nutex today. A broad-scope proposal was submitted six days ago. The 27 operating partners expressed strong interest. The information Tom Vo requested was delivered on April 5.</p>
+        <p>MedMerge is a separate company. I own it. The health insurance captive is live: Delaware LLC / Montana cell captive structure, operational. Commercial lines captive (P&C, workers' comp, D&O, E&O, GL) is planned. Medical malpractice captive is planned. MedMerge is not contractually tied to Nutex today. A broad-scope proposal was submitted six days ago. The information Tom Vo requested was delivered on April 5.</p>
         <p style="margin-top:10px; color: var(--orange); font-size: 14px;">This is prospective, not executed. The catalyst has not been priced because it does not yet exist in the market's information set.</p>
       </div>
 
@@ -892,7 +736,7 @@
     <section class="section" id="how-it-works">
       <div class="section-label">The Model</div>
       <h2>How the Model Works</h2>
-      <p>Five interlocking layers. Each one generates standalone economics. Each one makes the others more defensible.</p>
+      <p>Four interlocking layers. Each one generates standalone economics. Each one makes the others more defensible.</p>
 
       <div id="layers">
 
@@ -999,29 +843,6 @@
           </div>
         </div>
 
-        <div class="layer-accordion">
-          <div class="layer-trigger" role="button" aria-expanded="false" tabindex="0" onclick="toggleLayer(this)">
-            <div class="layer-trigger-left">
-              <span class="layer-num">05</span>
-              <span class="layer-title">Medicare Advantage: The Recurring Revenue Floor</span>
-            </div>
-            <span class="layer-arrow">▾</span>
-          </div>
-          <div class="layer-body">
-            <div class="layer-body-inner">
-              <p>An MA plan is already in development with existing ownership participation. The collective's physician network becomes the plan network. MA revenue is recurring, federally backed, and grows with demographics. Each state where the network has density is a filing, not a build.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROJECTION CHART -->
-    <section class="section" id="projection-chart">
-      <div class="chart-container">
-        <div class="chart-title">4-Year Captive Premium Trajectory (Internal Deployment Only)</div>
-        <canvas id="projectionChart" height="200"></canvas>
       </div>
     </section>
 
@@ -1053,11 +874,6 @@
             <td style="color:var(--cream-dim)">Baseline</td>
           </tr>
           <tr>
-            <td><span class="scenario-badge badge-floor">Floor</span><br><span style="font-size:12px;color:var(--cream-dim)">Governance cleanup, peer re-rating, no MedMerge</span></td>
-            <td>$80M</td><td>12-14x</td><td>$136–$159</td>
-            <td style="color:#7dbf7d">+35–57%</td>
-          </tr>
-          <tr>
             <td><span class="scenario-badge badge-internal">Internal Only</span><br><span style="font-size:12px;color:var(--cream-dim)">MedMerge deployed across Nutex facilities only</span></td>
             <td>$150M</td><td>12x</td><td>$255</td>
             <td style="color:#7dbf7d">+152%</td>
@@ -1068,7 +884,7 @@
             <td style="color:#7dbf7d">+593%</td>
           </tr>
           <tr class="highlight-row">
-            <td><span class="scenario-badge badge-full">Full Execution</span><br><span style="font-size:12px;color:var(--navy)">All layers deployed, 30-40 adjacency builds, MA live</span></td>
+            <td><span class="scenario-badge badge-full">Full Execution</span><br><span style="font-size:12px;color:var(--navy)">All layers deployed, 30-40 adjacency builds</span></td>
             <td>$560M</td><td>18x</td><td>$1,426</td>
             <td style="font-weight:700; color:#7dbf7d">+1,312%</td>
           </tr>
@@ -1094,65 +910,13 @@
       <p>None of these paths are in conflict. Each one makes the next more likely.</p>
     </section>
 
-    <!-- QUESTIONS -->
-    <section class="section" id="questions">
-      <div class="section-label">What I Need From You</div>
-      <h2>Break It</h2>
-      <p>Here are seven questions to consider.</p>
-
-      <ul class="question-list">
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>Is the health plan scalable across independent physicians, or does it only work in controlled settings?</strong>
-            <span>The pilot is one hospital. The thesis requires thousands of practices. What breaks in the middle?</span>
-          </div>
-        </li>
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>Can captive economics hold with a heterogeneous risk pool?</strong>
-            <span>The quality gate is designed to manage this, but as enrollment scales, selection pressure weakens. How do you think about this?</span>
-          </div>
-        </li>
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>Does the Fiserv analogy hold?</strong>
-            <span>Fiserv's moat is switching cost and regulatory complexity. Is the same true for a health plan and captive structure, or can a physician leave the collective without friction?</span>
-          </div>
-        </li>
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>What is the incumbent response?</strong>
-            <span>If this works, UnitedHealth, Elevance, and the large systems see it. What do they do? Can they replicate it, or does their employed-physician model prevent them from offering physician-owned economics?</span>
-          </div>
-        </li>
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>Is the adjacency play worth the capital?</strong>
-            <span>30-40 builds at $20M each is $600-800M. Is the network density effect worth that deployment, or is collective enrollment alone sufficient to fill the Tier 1 network?</span>
-          </div>
-        </li>
-        <li class="question-item">
-          <span class="q-num"></span>
-          <div class="q-text">
-            <strong>What would you need to see in the next 12 months before you would commit capital, advisory time, or a board seat?</strong>
-            <span>Be specific. I can deliver metrics. I need to know which ones matter to you.</span>
-          </div>
-        </li>
-      </ul>
-    </section>
-
     <hr class="rule">
 
     <!-- FOOTER -->
     <footer class="memo-footer">
       <span class="footer-brand">The Rojas Report</span>
-      <p>Confidential working document. Not investment advice. Not a solicitation. For discussion among trusted advisors only.</p>
-      <p style="margin-top:8px;">The Rojas Report: 5,000 subscribers, 450,000 views in the last 30 days, 2.5M+ monthly impressions on X, ranked #211 on LinkedIn US with 70.4K average views per post. Combined monthly reach exceeds 3 million impressions with zero ad spend.</p>
+      <p>For discussion with Nutex only. Not investment advice. Not a solicitation. All Rights Reserved 2026, Dutch Rojas and MedMerge, LLC, Rojas Media LLC.</p>
+      <p style="margin-top:8px;">The Rojas Report has 5,000 subscribers, 3.7M monthly views on X, ranked #211 on LinkedIn with 70.4K average impressions per post. Combined reach is nearly 4M impressions with no ad spend.</p>
     </footer>
 
   </main>
@@ -1189,78 +953,6 @@ function toggleLayer(trigger) {
   trigger.setAttribute('aria-expanded', !expanded);
   body.style.maxHeight = expanded ? '0' : body.scrollHeight + 'px';
 }
-
-// ─── PROJECTION CHART ───
-const ctx = document.getElementById('projectionChart').getContext('2d');
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Today', 'Year 1', 'Year 2', 'Year 3', 'Year 4'],
-    datasets: [
-      {
-        label: 'Annual Premium ($M)',
-        data: [0, 30, 45, 75, 150],
-        borderColor: 'rgba(247,244,239,0.4)',
-        backgroundColor: 'rgba(247,244,239,0.04)',
-        pointBackgroundColor: 'rgba(247,244,239,0.8)',
-        pointRadius: 4,
-        fill: true,
-        tension: 0.4,
-        yAxisID: 'y'
-      },
-      {
-        label: 'Implied Share Price ($)',
-        data: [101, 120, 129, 149, 197],
-        borderColor: '#d4622a',
-        backgroundColor: 'rgba(212,98,42,0.08)',
-        pointBackgroundColor: '#d4622a',
-        pointRadius: 5,
-        fill: true,
-        tension: 0.4,
-        yAxisID: 'y1'
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    interaction: { mode: 'index', intersect: false },
-    plugins: {
-      legend: {
-        labels: {
-          color: 'rgba(247,244,239,0.6)',
-          font: { family: "'Source Sans 3', sans-serif", size: 11 },
-          boxWidth: 12
-        }
-      },
-      tooltip: {
-        backgroundColor: '#1a2a3a',
-        borderColor: 'rgba(247,244,239,0.15)',
-        borderWidth: 1,
-        titleColor: '#f7f4ef',
-        bodyColor: 'rgba(247,244,239,0.7)',
-        titleFont: { family: "'Cormorant Garamond', serif", size: 14 }
-      }
-    },
-    scales: {
-      x: {
-        grid: { color: 'rgba(247,244,239,0.06)' },
-        ticks: { color: 'rgba(247,244,239,0.5)', font: { family: "'Source Sans 3', sans-serif", size: 11 } }
-      },
-      y: {
-        position: 'left',
-        title: { display: true, text: 'Premium ($M)', color: 'rgba(247,244,239,0.4)', font: { size: 10 } },
-        grid: { color: 'rgba(247,244,239,0.06)' },
-        ticks: { color: 'rgba(247,244,239,0.5)', font: { size: 11 } }
-      },
-      y1: {
-        position: 'right',
-        title: { display: true, text: 'Share Price ($)', color: 'rgba(212,98,42,0.7)', font: { size: 10 } },
-        grid: { drawOnChartArea: false },
-        ticks: { color: 'rgba(212,98,42,0.7)', font: { size: 11 } }
-      }
-    }
-  }
-});
 
 // ─── TOC ACTIVE STATE ───
 const sections = document.querySelectorAll('section[id], header.memo-header');
